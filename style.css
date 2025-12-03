@@ -204,6 +204,15 @@ section {
     flex: 1;
     overflow: visible;
     height: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 2rem;
+    width: auto;
+    display: block;
 }
 
 .logo {
@@ -316,7 +325,7 @@ section {
         background-color: var(--bg-secondary);
         flex-direction: column;
         align-items: flex-start;
-        padding: 90px var(--spacing-lg) var(--spacing-lg);
+        padding: 70px var(--spacing-lg) var(--spacing-lg);
         gap: var(--spacing-md);
         border-left: 1px solid var(--border-color);
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
@@ -333,6 +342,31 @@ section {
 
     .nav-menu.active {
         transform: translateX(0);
+    }
+
+    .nav-logo-mobile {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+        padding: var(--spacing-md) 0;
+        margin-bottom: var(--spacing-sm);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .logo-img-mobile {
+        height: 2rem;
+        width: auto;
+        display: block;
+    }
+
+    .logo-text-mobile {
+        font-size: 1.25rem;
+        font-weight: 800;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .nav-link {
@@ -382,6 +416,11 @@ section {
     /* Ensure mobile menu is hidden on desktop */
     .nav-menu.active {
         transform: none !important;
+    }
+
+    /* Hide mobile logo on desktop */
+    .nav-logo-mobile {
+        display: none;
     }
 }
 
@@ -791,7 +830,6 @@ section {
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
     border-color: var(--color-cyan);
 }
@@ -1622,6 +1660,7 @@ a:hover,
 
     .generator-card {
         overflow: visible !important;
+        padding: 20px;
     }
 }
 
@@ -1682,10 +1721,6 @@ html {
 .feature-card,
 .step-card {
     transition: all var(--transition-base);
-}
-
-.feature-card:hover {
-    transform: translateY(-8px);
 }
 
 .step-card:hover {
