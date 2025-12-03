@@ -135,51 +135,6 @@ async function generatePrompt(userInput) {
 ### Security Note
 For production, implement a backend proxy to secure your API keys. Never expose API keys in client-side JavaScript.
 
-## 💰 Google AdSense Setup
-
-### Ad Placement Locations
-The HTML includes three strategically placed ad zones:
-
-1. **Above the Fold**: Horizontal banner after hero section
-2. **Mid-Content**: In-article ad between sections
-3. **Bottom**: Multiplex ad at page bottom
-
-### How to Activate Ads
-
-1. Apply for Google AdSense and get approved
-2. Uncomment the ad code in HTML files
-3. Replace `ca-pub-XXXXXXXXXX` with your publisher ID
-4. Add the AdSense script to your `<head>`:
-
-```html
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
-     crossorigin="anonymous"></script>
-```
-
-## 📧 Contact Form Integration
-
-The contact form is fully functional with validation but requires a backend to send emails.
-
-### Integration Options
-
-**Formspree** (Easiest)
-```javascript
-// In script.js, update the form submission URL
-const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formData)
-});
-```
-
-**EmailJS** (Free tier available)
-- Add EmailJS SDK
-- Update contact form handler
-
-**Custom Backend** (Most control)
-- Create your own email API endpoint
-- Update form submission URL
-
 ## 🎯 Key Features Explained
 
 ### Prompt Generator
