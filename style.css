@@ -16,18 +16,18 @@
     --color-green: #10B981;
     --color-warning: #F59E0B;
 
-    /* Backgrounds */
-    --bg-primary: #0F172A;
-    --bg-secondary: #1E293B;
-    --bg-card: #1E293B;
+    /* Backgrounds - LIGHT THEME */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8FAFC;
+    --bg-card: #FFFFFF;
 
-    /* Text Colors */
-    --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
+    /* Text Colors - LIGHT THEME */
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
     --text-muted: #64748B;
 
-    /* Borders */
-    --border-color: #334155;
+    /* Borders - LIGHT THEME */
+    --border-color: #E2E8F0;
 
     /* Gradients */
     --gradient-secondary: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%);
@@ -48,11 +48,11 @@
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
 
-    /* Shadows */
+    /* Shadows - LIGHT THEME */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
@@ -175,12 +175,13 @@ section {
    ================================================ */
 
 .header {
-    background-color: rgba(15, 23, 42, 0.98);
+    background-color: rgba(255, 255, 255, 0.98);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: all var(--transition-base);
+    backdrop-filter: blur(10px);
 }
 
 .header.scrolled {
@@ -314,7 +315,7 @@ section {
         padding: 90px var(--spacing-lg) var(--spacing-lg);
         gap: var(--spacing-md);
         border-left: 1px solid var(--border-color);
-        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
         z-index: 1001;
 
         /* Transform-based animation - prevents horizontal scroll */
@@ -700,7 +701,7 @@ section {
 
 .how-it-works {
     padding: var(--spacing-2xl) 0;
-    background-color: rgba(30, 41, 59, 0.3);
+    background-color: #F8FAFC;
 }
 
 .section-title-center {
@@ -834,7 +835,7 @@ section {
 
 .faq {
     padding: var(--spacing-2xl) 0;
-    background-color: rgba(30, 41, 59, 0.3);
+    background-color: #F8FAFC;
 }
 
 .faq-grid {
@@ -1336,7 +1337,7 @@ section {
 
 /* Hero Gradient Heading */
 .hero-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #a78bfa 50%, #F8FAFC 100%) !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #EC4899 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
@@ -1561,33 +1562,11 @@ a:hover,
     height: auto;
 }
 
-/* Sidebar Ad Section */
-.ad-sidebar {
-    display: none;
-    position: relative;
-    z-index: 1; /* Keep sidebar in normal flow, below mobile menu */
-}
-
-.ad-sidebar-sticky {
-    position: sticky;
-    top: 90px;
-    padding: 20px;
-    z-index: 1; /* Keep below mobile menu and backdrop */
-}
-
-.ad-sidebar .ad-placeholder {
-    min-height: 600px;
-}
-
-/* Desktop Layout with Sidebar */
+/* Desktop Layout */
 @media (min-width: 1024px) {
     .generator-layout {
-        grid-template-columns: 1fr 320px;
+        grid-template-columns: 1fr;
         gap: var(--spacing-xl);
-    }
-
-    .ad-sidebar {
-        display: block;
     }
 
     .ad-content-break .ad-placeholder {
@@ -1624,15 +1603,6 @@ a:hover,
 
     .ad-content-break .ad-placeholder {
         min-height: 100px;
-    }
-
-    /* CRITICAL: Hide sidebar completely on mobile */
-    .ad-sidebar {
-        display: none !important;
-        visibility: hidden !important;
-        width: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
     }
 
     /* Ensure generator layout is single column - no scroll */
@@ -1728,7 +1698,7 @@ html {
 
 /* Enhanced Header - NO BLUR */
 .header {
-    background-color: rgba(15, 23, 42, 0.98);
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 /* Character Counter Color Transitions */
