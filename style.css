@@ -564,9 +564,15 @@ section {
     font-size: 1rem;
 }
 
+.textarea-wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .form-textarea {
     width: 100%;
     padding: var(--spacing-md);
+    padding-right: 3rem;
     background-color: var(--bg-primary);
     border: 2px solid var(--border-color);
     border-radius: var(--radius-lg);
@@ -575,6 +581,25 @@ section {
     font-family: inherit;
     resize: vertical;
     transition: all var(--transition-base);
+}
+
+.clear-textarea-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    display: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.clear-textarea-btn:hover {
+    opacity: 0.7;
+}
+
+.clear-textarea-btn.visible {
+    display: block;
 }
 
 .form-textarea:focus {

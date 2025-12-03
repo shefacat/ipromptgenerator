@@ -53,6 +53,7 @@ const elements = {
     btnLoader: document.getElementById('btnLoader'),
     charCounter: document.getElementById('charCounter'),
     charCount: document.getElementById('charCount'),
+    clearTextBtn: document.getElementById('clearTextBtn'),
 
     // Response elements
     responseSection: document.getElementById('responseSection'),
@@ -188,7 +189,34 @@ function initCharCounter() {
             } else {
                 elements.charCounter.style.color = '#64748B'; // Muted
             }
+
+            // Toggle clear button visibility
+            toggleClearButton();
         });
+    }
+}
+
+// ================================================
+// CLEAR TEXTAREA BUTTON
+// ================================================
+
+function toggleClearButton() {
+    if (elements.clearTextBtn && elements.userInput) {
+        if (elements.userInput.value.length > 0) {
+            elements.clearTextBtn.classList.add('visible');
+        } else {
+            elements.clearTextBtn.classList.remove('visible');
+        }
+    }
+}
+
+function clearTextarea() {
+    if (elements.userInput) {
+        elements.userInput.value = '';
+        elements.charCount.textContent = '0';
+        elements.charCounter.style.color = '#64748B'; // Reset to muted
+        toggleClearButton();
+        elements.userInput.focus();
     }
 }
 
@@ -460,6 +488,8 @@ function handleGenerateAnother() {
     // Clear the textarea
     elements.userInput.value = '';
     elements.charCount.textContent = '0';
+    elements.charCounter.style.color = '#64748B'; // Reset to muted
+    toggleClearButton();
 
     // Hide result section
     hideResult();
@@ -496,12 +526,23 @@ function initEventListeners() {
         elements.generateAnotherBtn.addEventListener('click', handleGenerateAnother);
     }
 
-    // Prevent form submission on Enter in textarea (optional)
+    // Clear textarea button
+    if (elements.clearTextBtn) {
+        elements.clearTextBtn.addEventListener('click', clearTextarea);
+    }
+
+    // Keyboard shortcuts for textarea
     if (elements.userInput) {
         elements.userInput.addEventListener('keydown', (e) => {
+            // Ctrl+Enter: Submit form
             if (e.key === 'Enter' && e.ctrlKey) {
                 e.preventDefault();
                 elements.promptForm.dispatchEvent(new Event('submit'));
+            }
+            // Escape: Clear textarea
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                clearTextarea();
             }
         });
     }
