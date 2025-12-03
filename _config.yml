@@ -1,0 +1,30 @@
+# Jekyll Configuration for GitHub Pages
+# This enables pretty URLs (e.g., /contact/ instead of /contact.html)
+
+# Permalink style - removes .html from URLs
+permalink: pretty
+
+# GitHub Pages specific settings
+plugins:
+  - jekyll-relative-links
+
+# Exclude files from Jekyll processing
+exclude:
+  - README.md
+  - LICENSE
+  - node_modules/
+  - vendor/
+
+# Site settings
+title: iPrompt Generator
+description: Free AI Prompt Generator Tool - Create Better AI Prompts
+url: https://ipromptgenerator.com
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+# Enable relative links to work with pretty permalinks
+relative_links:
+  enabled: true
+  collections: false
