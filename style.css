@@ -10,7 +10,7 @@
 
 :root {
     /* Color Palette */
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-primary: linear-gradient(135deg, #552bd7 0%, #764ba2 100%);
     --color-cyan: #06B6D4;
     --color-pink: #EC4899;
     --color-green: #10B981;
@@ -201,7 +201,7 @@ section {
 }
 
 .nav-brand {
-    flex: 1;
+    flex: 0 0 auto;
     overflow: visible;
     height: auto;
     display: flex;
@@ -227,11 +227,26 @@ section {
     height: auto;
 }
 
+.nav-bookmark {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookmark-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
     list-style: none;
+    flex: 0 0 auto;
 }
 
 .nav-link {
@@ -307,6 +322,10 @@ section {
         padding-left: 1rem;
         padding-right: 1rem;
         max-width: 100%;
+    }
+
+    .nav-bookmark {
+        display: none;
     }
 
     .nav-toggle {
@@ -631,7 +650,7 @@ section {
 
 .btn-copy {
     background: var(--gradient-secondary);
-    color: var(--text-primary);
+    color: #FFFFFF;
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: 0.875rem;
 }
@@ -675,19 +694,24 @@ section {
 
 .response-section {
     max-width: 900px;
-    margin: var(--spacing-xl) auto 0;
+    margin: 0 auto;
     opacity: 0;
     transform: translateY(20px);
     transition: all var(--transition-slow);
     pointer-events: none;
-    overflow: visible;
-    height: auto;
+    overflow: hidden;
+    height: 0;
+    width: 0;
 }
 
 .response-section.visible {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
+    overflow: visible;
+    height: auto;
+    width: 100%;
+    margin: var(--spacing-xl) auto 0;
 }
 
 .response-card {
@@ -786,6 +810,7 @@ section {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 800;
+    color: white;
     margin: 0 auto var(--spacing-md);
     box-shadow: var(--shadow-md);
 }
@@ -842,6 +867,7 @@ section {
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-md);
+    color: white;
 }
 
 .icon-gradient-1 { background: var(--gradient-primary); }
@@ -934,7 +960,7 @@ section {
    ================================================ */
 
 .footer {
-    background-color: var(--bg-secondary);
+    background-color: #fff;
     border-top: 1px solid var(--border-color);
     padding: var(--spacing-2xl) 0 var(--spacing-lg);
 
@@ -951,9 +977,23 @@ section {
     text-align: center;
 }
 
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-logo-img {
+    height: 2rem;
+    width: auto;
+    display: block;
+}
+
 .footer-title {
     font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1046,6 +1086,10 @@ section {
 
     .footer-section {
         text-align: left;
+    }
+
+    .footer-brand {
+        justify-content: flex-start;
     }
 
     .footer-links {
@@ -1463,6 +1507,7 @@ section {
 /* Enhanced Copy Button */
 .enhanced-copy-btn {
     background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%) !important;
+    color: #FFFFFF !important;
     transition: all var(--transition-base);
 }
 
@@ -1661,6 +1706,23 @@ a:hover,
     .generator-card {
         overflow: visible !important;
         padding: 20px;
+    }
+
+    .response-card {
+        padding: 20px;
+    }
+
+    .generator-section {
+        padding-top: 0;
+    }
+
+    .hero {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
     }
 }
 

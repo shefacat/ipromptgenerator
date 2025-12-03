@@ -3,32 +3,38 @@
 // ================================================
 
 // TODO: Replace with your actual API endpoint
-const API_ENDPOINT = 'YOUR_API_ENDPOINT_HERE';
+const API_ENDPOINT = 'https://promptgenerator.shiref-abouzaid.workers.dev/';
 
 // Example API call structure (uncomment and modify when ready):
-/*
+
 async function callAPI(userInput) {
-    const response = await fetch(API_ENDPOINT, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            // Add your API key or auth headers here
-            // 'Authorization': 'Bearer YOUR_API_KEY'
-        },
-        body: JSON.stringify({
-            prompt: userInput,
-            // Add other required parameters
-        })
-    });
+    // Your Cloudflare Worker URL
+    const WORKER_URL = API_ENDPOINT;
+    try {
+        const response = await fetch(WORKER_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userInput: userInput
+            })
+        });
 
-    if (!response.ok) {
-        throw new Error('API request failed');
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'API request failed');
+        }
+
+        const data = await response.json();
+        return data.generatedPrompt;
+        
+    } catch (error) {
+        console.error('API Error:', error);
+        throw error;
     }
-
-    const data = await response.json();
-    return data.generatedPrompt; // Adjust based on your API response structure
 }
-*/
+
 
 // ================================================
 // DOM ELEMENTS
@@ -251,6 +257,9 @@ Please provide detailed, high-quality output that directly addresses the user's 
 async function handlePromptGeneration(e) {
     e.preventDefault();
 
+    // Hide any previous error messages
+    hideError();
+
     const userInput = elements.userInput.value;
 
     // Validate input
@@ -263,11 +272,10 @@ async function handlePromptGeneration(e) {
     try {
         // Show loading state
         setLoadingState(true);
-        hideError();
 
         // Generate prompt
         // TODO: Replace generatePrompt with actual API call
-        const generatedPrompt = await generatePrompt(userInput);
+        const generatedPrompt = await callAPI(userInput);
 
         // Display result
         displayResult(generatedPrompt);
@@ -340,25 +348,25 @@ function showError(message) {
         errorElement = document.createElement('div');
         errorElement.id = 'errorMessage';
         errorElement.style.cssText = `
-            background-color: rgba(239, 68, 68, 0.1);
-            border: 1px solid #EF4444;
-            color: #FEE2E2;
+            background-color: rgba(239, 68, 68, 0.15);
+            border: 2px solid #EF4444;
+            color: #EF4444;
             padding: 1rem;
             border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             animation: fadeInUp 0.3s ease-out;
+            text-align: center;
         `;
-        elements.promptForm.insertBefore(errorElement, elements.promptForm.firstChild);
+        // Insert after the generate button
+        elements.generateBtn.parentElement.appendChild(errorElement);
     }
 
     errorElement.textContent = message;
     errorElement.style.display = 'block';
 
-    // Auto-hide after 5 seconds
-    setTimeout(() => {
-        hideError();
-    }, 5000);
+    // Error will remain visible until user clicks generate again
 }
 
 function hideError() {
@@ -575,7 +583,7 @@ function initContactForm() {
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('An error occurred while sending your message. Please try again or email us directly at support@ipromptgenerator.com');
+                alert('An error occurred while sending your message. Please try again or email us directly at shefa_cat@yahoo.com');
             } finally {
                 // Hide loading state
                 if (contactSubmitBtn) {
