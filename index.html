@@ -92,9 +92,16 @@
   gtag('js', new Date());
 
   gtag('config', 'G-SY9Z9H3NTE');
-  document.getElementById("generateBtn").addEventListener("click", function () {
-    gtag('event', 'generate_prompt_click');
+function gtagSendEvent() {
+  gtag('event', 'generate_prompt_click', {
+    'event_callback': function () {
+      console.log("conversion sent!");
+    },
+    'event_timeout': 2000
   });
+  return false;
+}
+
 </script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9548270312571067"
@@ -224,7 +231,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         <span id="charCount">0</span> characters
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-generate-enhanced" id="generateBtn">
+                                <button type="submit" class="btn btn-primary btn-generate-enhanced" onclick="gtagSendEvent()" id="generateBtn">
                                     <span class="btn-text">Generate Prompt</span>
                                     <span class="btn-loader" id="btnLoader"></span>
                                 </button>
