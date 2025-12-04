@@ -89,7 +89,7 @@ body {
 .main,
 section {
     /* overflow-x: hidden; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Ensure all grids stay within bounds */
@@ -147,7 +147,7 @@ a:hover {
     margin: 0 auto;
     padding: 0 var(--spacing-md);
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 @media (min-width: 768px) {
