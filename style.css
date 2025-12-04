@@ -208,6 +208,13 @@ section {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-brand:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-img {
@@ -374,6 +381,20 @@ section {
         border-bottom: 1px solid var(--border-color);
     }
 
+    .nav-logo-mobile .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .nav-logo-mobile .nav-link:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .logo-img-mobile {
         height: 2rem;
         width: auto;
@@ -489,6 +510,15 @@ section {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-lg);
     line-height: 1.7;
+}
+
+.btn-hero-cta {
+    margin-bottom: 3rem;
+    display: block;
+    max-width: 300px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: var(--spacing-md) var(--spacing-xl);
 }
 
 .hero-badges {
@@ -1082,6 +1112,12 @@ section {
     text-align: center;
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--border-color);
+}
+
+.footer-bookmark {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
 }
 
 .footer-copyright {

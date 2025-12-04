@@ -56,7 +56,7 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
-        },
+        }
     }
     </script>
 
@@ -101,17 +101,16 @@
     <!-- Header Section -->
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav-brand">
+            <a href="/" class="nav-brand">
                 <img src="images/logo.png" alt="iPrompt Generator Logo" class="logo-img">
                 <span class="logo">iPrompt Generator</span>
-            </div>
-            <div class="nav-bookmark">
-                <span class="bookmark-text">🔖 Bookmark us for quick access</span>
-            </div>
+            </a>
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item nav-logo-mobile">
-                    <img src="images/logo.png" alt="iPrompt Generator Logo" class="logo-img-mobile">
-                    <span class="logo-text-mobile">iPrompt Generator</span>
+                    <a href="/" class="nav-link">
+                        <img src="images/logo.png" alt="iPrompt Generator Logo" class="logo-img-mobile">
+                        <span class="logo-text-mobile">iPrompt Generator</span>
+                    </a>
                 </li>
                 <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="/privacy/" class="nav-link">Privacy</a></li>
@@ -131,8 +130,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title hero-gradient">Transform Your Ideas into Perfect AI Prompts</h1>
+                    <h1 class="hero-title hero-gradient">Free AI Prompt Generator Create Perfect Prompts Instantly</h1>
                     <p class="hero-description">Generate optimized, effective prompts for ChatGPT, Claude, and any AI model. Simply describe what you need, and our AI-powered generator creates professional-grade prompts instantly.</p>
+                    <button class="btn btn-primary btn-hero-cta" id="startGeneratingBtn">Start Generating Prompt</button>
                     <div class="hero-badges">
                         <span class="badge trust-badge">
                             <svg class="badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -368,6 +368,7 @@
             </div>
 
             <div class="footer-bottom">
+                <p class="footer-bookmark">🔖 Bookmark us for quick access</p>
                 <p class="footer-copyright">&copy; 2025 iPrompt Generator. All rights reserved.</p>
             </div>
         </div>

@@ -54,6 +54,7 @@ const elements = {
     charCounter: document.getElementById('charCounter'),
     charCount: document.getElementById('charCount'),
     clearTextBtn: document.getElementById('clearTextBtn'),
+    startGeneratingBtn: document.getElementById('startGeneratingBtn'),
 
     // Response elements
     responseSection: document.getElementById('responseSection'),
@@ -691,6 +692,32 @@ async function simulateFormSubmission(formData) {
 }
 
 // ================================================
+// SCROLL TO GENERATOR CARD FUNCTIONALITY
+// ================================================
+
+function initScrollToTextarea() {
+    const startBtn = elements.startGeneratingBtn;
+    const generatorCard = document.querySelector('.generator-card');
+    const textarea = elements.userInput;
+
+    if (!startBtn || !generatorCard || !textarea) return;
+
+    startBtn.addEventListener('click', () => {
+        const cardPosition = generatorCard.getBoundingClientRect().top + window.pageYOffset;
+        const offset = -100; // Scroll to 100px above the generator card
+        window.scrollTo({
+            top: cardPosition + offset,
+            behavior: 'smooth'
+        });
+        
+        // Focus on textarea after scroll animation completes
+        setTimeout(() => {
+            textarea.focus();
+        }, 500); // Delay to allow smooth scroll to complete
+    });
+}
+
+// ================================================
 // INITIALIZE APP
 // ================================================
 
@@ -702,6 +729,7 @@ function initApp() {
     initEventListeners();
     initSmoothScroll();
     initContactForm();
+    initScrollToTextarea();
 
     // Log initialization
     console.log('iPrompt Generator initialized successfully');
