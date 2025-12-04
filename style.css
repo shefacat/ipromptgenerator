@@ -521,6 +521,13 @@ section {
     padding: var(--spacing-md) var(--spacing-xl);
 }
 
+@media (max-width: 768px) {
+    .btn-hero-cta {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 .hero-badges {
     display: flex;
     justify-content: center;
@@ -1039,6 +1046,13 @@ section {
     justify-content: center;
     gap: 0.75rem;
     margin-bottom: var(--spacing-sm);
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-brand:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .footer-logo-img {
