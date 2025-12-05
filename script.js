@@ -625,7 +625,7 @@ function initContactForm() {
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('An error occurred while sending your message. Please try again or email us directly at shefa_cat@yahoo.com');
+                alert('An error occurred while sending your message. Please try again or email us directly at shiref.abouzaid@gmail.com');
             } finally {
                 // Hide loading state
                 if (contactSubmitBtn) {
