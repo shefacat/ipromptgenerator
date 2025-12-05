@@ -2592,6 +2592,9 @@ font-size: 25px;
     flex-shrink: 0;
     color: var(--color-cyan);
 }
+.logo-img-mobile{
+    display: none;
+}
 
 /* Responsive Blog Layout */
 @media (min-width: 1024px) {
