@@ -2603,7 +2603,7 @@ font-size: 25px;
     .blog-sidebar {
         /* position: sticky;
         top: 90px; */
-        max-height: calc(100vh - 110px);
+        /* max-height: calc(100vh - 110px); */
         /* overflow-y: auto;
         overflow-x: hidden; */
         padding-right: 4px;
