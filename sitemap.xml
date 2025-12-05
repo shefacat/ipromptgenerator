@@ -1,34 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ipromptgenerator.com/</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ipromptgenerator.com/index.html</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ipromptgenerator.com/contact.html</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ipromptgenerator.com/privacy.html</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ipromptgenerator.com/terms.html</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-</urlset>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
+<url>
+  <loc>https://ipromptgenerator.com/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/privacy/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/terms/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/contact/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/introduction-to-prompt-engineering-how-it-works-and-why-it-matters/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/essential-elements-of-an-effective-ai-prompt/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/how-to-structure-your-prompts-for-better-ai-responses/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/the-anatomy-of-a-perfect-ai-prompt-examples-and-templates/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/common-prompt-mistakes-and-how-to-fix-them/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/ai-models-and-tools/chatgpt-vs-claude-vs-gemini-which-ai-model-is-best-for-you/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/ai-models-and-tools/how-to-write-better-prompts-for-chatgpt-2026-guide/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/ai-models-and-tools/mastering-claude-ai-prompt-tips-and-tricks/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/ai-models-and-tools/gpt-4-vs-gpt-4o-mini-understanding-the-difference/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/ai-models-and-tools/top-10-ai-tools-every-content-creator-should-know/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/use-cases-and-applications/50-plus-chatgpt-prompts-for-business-professionals/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/use-cases-and-applications/ai-prompts-for-content-writers-boost-your-productivity-10x/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/use-cases-and-applications/ai-prompts-for-developers-code-faster-and-smarter/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/use-cases-and-applications/how-to-use-ai-prompts-for-social-media-marketing/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/use-cases-and-applications/creating-stunning-ai-art-the-ultimate-prompt-guide/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/effective-prompt-elements/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/tips-and-best-practices/future-prompt-engineering-2026/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/tips-and-best-practices/optimize-prompts-efficiency/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/tips-and-best-practices/consistent-ai-results/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/tips-and-best-practices/10-prompt-hacks/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/advanced-techniques/few-shot-vs-zero-shot/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/advanced-techniques/chain-of-thought-prompting/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/prompt-engineering-basics/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/advanced-techniques/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/use-cases-and-applications/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/ai-models-and-tools/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ipromptgenerator.com/blog/tips-and-best-practices/</loc>
+  <lastmod>2025-12-05T09:26:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
