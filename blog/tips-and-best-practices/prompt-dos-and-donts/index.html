@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Prompt Engineering Dos and Don'ts: Essential Guidelines | iPrompt Generator</title>
+    <meta name="description" content="Master prompt engineering with essential dos and don'ts. Learn what works and what to avoid when crafting prompts for ChatGPT, Claude, and other AI models. Expert guidelines for better results.">
+    <meta name="keywords" content="prompt dos and don'ts, prompt engineering guidelines, prompt best practices, prompt mistakes to avoid, effective prompt writing, prompt engineering rules, ChatGPT prompt tips, AI prompt guidelines, prompt writing dos and don'ts, prompt engineering mistakes">
+    <meta name="author" content="iPrompt Generator">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Prompt Engineering Dos and Don'ts: Essential Guidelines">
+    <meta property="og:description" content="Master prompt engineering with essential dos and don'ts. Learn what works and what to avoid when crafting prompts for ChatGPT, Claude, and other AI models.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/">
+    <meta property="og:image" content="https://ipromptgenerator.com/images/blog/prompt-dos-and-donts-featured.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prompt engineering dos and don'ts - Essential guidelines for effective AI prompts">
+    <meta property="og:site_name" content="iPrompt Generator">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2025-01-27T08:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-27T08:00:00+00:00">
+    <meta property="article:author" content="iPrompt Generator">
+    <meta property="article:section" content="Tips & Best Practices">
+    <meta property="article:tag" content="Prompt Engineering">
+    <meta property="article:tag" content="Best Practices">
+    <meta property="article:tag" content="Prompt Guidelines">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prompt Engineering Dos and Don'ts: Essential Guidelines">
+    <meta name="twitter:description" content="Master prompt engineering with essential dos and don'ts. Learn what works and what to avoid for better AI results.">
+    <meta name="twitter:image" content="https://ipromptgenerator.com/images/blog/prompt-dos-and-donts-featured.webp">
+    <meta name="twitter:image:alt" content="Prompt dos and don'ts guide">
+    <meta name="twitter:site" content="@ipromptgen">
+    <meta name="twitter:creator" content="@ipromptgen">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../../../style.css">
+
+    <!-- Structured Data - Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Prompt Engineering Dos and Don'ts: Essential Guidelines",
+        "description": "Comprehensive guide to prompt engineering best practices and common mistakes. Learn essential dos and don'ts for crafting effective prompts that deliver superior results with ChatGPT, Claude, and other AI models.",
+        "image": "https://ipromptgenerator.com/images/blog/prompt-dos-and-donts-featured.webp",
+        "datePublished": "2025-01-27T08:00:00+00:00",
+        "dateModified": "2025-01-27T08:00:00+00:00",
+        "author": {
+            "@type": "Organization",
+            "name": "iPrompt Generator",
+            "url": "https://ipromptgenerator.com/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "iPrompt Generator",
+            "url": "https://ipromptgenerator.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ipromptgenerator.com/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/"
+        },
+        "articleSection": "Tips & Best Practices",
+        "keywords": "prompt dos and don'ts, prompt engineering guidelines, prompt best practices, effective prompt writing",
+        "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ipromptgenerator.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://ipromptgenerator.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Tips & Best Practices",
+                "item": "https://ipromptgenerator.com/blog/tips-and-best-practices/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Prompt Engineering Dos and Don'ts: Essential Guidelines",
+                "item": "https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data - FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are the most common prompt engineering mistakes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common prompt mistakes include being too vague, asking multiple questions at once, lacking context, using ambiguous language, not specifying output format, and failing to provide examples. These errors lead to poor or inconsistent AI responses."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should I always include in my prompts?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Always include clear role definition, specific context, explicit instructions, desired output format, and relevant examples when helpful. Provide enough detail for the AI to understand exactly what you need without being overly verbose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I avoid getting vague or off-topic AI responses?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To avoid vague responses, be specific about your requirements, provide clear context, use concrete examples, specify the output format, set boundaries and constraints, and break complex tasks into clear steps. The more precise your prompt, the better the AI response."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY9Z9H3NTE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SY9Z9H3NTE');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9548270312571067"
+         crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <img src="/images/logo.png" alt="iPrompt Generator Logo" class="logo-img">
+                <span class="logo">iPrompt Generator</span>
+            </div>
+            <div class="nav-bookmark">
+                <span class="bookmark-text">🔖 Bookmark us for quick access</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item nav-logo-mobile">
+                    <img src="/images/logo.png" alt="iPrompt Generator Logo" class="logo-img-mobile">
+                    <span class="logo-text-mobile">iPrompt Generator</span>
+                </li>
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/privacy/" class="nav-link">Privacy</a></li>
+                <li class="nav-item"><a href="/terms/" class="nav-link">Terms</a></li>
+                <li class="nav-item"><a href="/contact/" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/blog/">
+                            <span itemprop="name">Blog</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/blog/tips-and-best-practices/">
+                            <span itemprop="name">Tips & Best Practices</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Prompt Engineering Dos and Don'ts: Essential Guidelines</span>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Article Layout with Sidebar -->
+        <section class="blog-layout-section">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Main Article Content -->
+                    <article class="blog-main-content" itemscope itemtype="https://schema.org/Article">
+                        <!-- Article Header -->
+                        <header class="article-header">
+                            <div class="article-meta-top">
+                                <a href="/blog/tips-and-best-practices/" class="article-category-link">
+                                    <svg class="category-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    </svg>
+                                    Tips & Best Practices
+                                </a>
+                                <time class="article-date" datetime="2025-01-27" itemprop="datePublished">Jan 27, 2025</time>
+                                <span class="article-reading-time">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    8 min read
+                                </span>
+                            </div>
+                            <h1 class="article-title hero-gradient" itemprop="headline">Prompt Engineering Dos and Don'ts: Essential Guidelines</h1>
+                            <p class="article-intro" itemprop="description">Master the fundamentals of prompt engineering with this comprehensive guide to what works and what doesn't. Learn essential dos and don'ts that will help you craft effective prompts for ChatGPT, Claude, and other AI models. Avoid common mistakes and adopt proven best practices for superior results.</p>
+                        </header>
+
+                        <!-- Featured Image -->
+                        <div class="article-featured-image">
+                            <img src="/images/blog/prompt-dos-and-donts-featured.webp" alt="Prompt engineering dos and don'ts - Essential guidelines for effective AI prompts and common mistakes to avoid" loading="eager" itemprop="image">
+                        </div>
+
+                        <!-- Article Content -->
+                        <div class="article-content" itemprop="articleBody">
+                            <!-- Introduction Paragraph -->
+                            <p class="article-text">Prompt engineering is both an art and a science. While AI models like ChatGPT and Claude are incredibly powerful, their effectiveness depends entirely on how you communicate with them. A well-crafted prompt can unlock remarkable capabilities, while a poorly constructed one leads to frustration and mediocre results. Understanding the fundamental dos and don'ts of prompt engineering is essential for anyone serious about leveraging AI effectively. This guide distills years of collective experience into actionable guidelines that will help you avoid common pitfalls and adopt practices that consistently deliver superior outcomes. Whether you're a beginner or looking to refine your skills, these principles will transform your AI interactions.</p>
+
+                            <!-- H2 Section 1 -->
+                            <h2 class="article-heading">Essential Dos: What Always Works</h2>
+                            <p class="article-text">The foundation of effective prompt engineering lies in following proven best practices. These dos represent techniques that consistently improve AI response quality, reliability, and usefulness across different models and use cases.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Be Specific and Clear</h3>
+                            <p class="article-text">Specificity is the cornerstone of effective prompts. Vague requests produce vague results, while clear, detailed instructions guide the AI toward exactly what you need. Being specific means defining your requirements precisely, including relevant details, and leaving little room for interpretation.</p>
+
+                            <ul class="article-list">
+                                <li><strong>Instead of:</strong> "Write about marketing"</li>
+                                <li><strong>Do this:</strong> "Write a 500-word blog post about email marketing strategies for B2B SaaS companies targeting small businesses, focusing on automation tools and conversion optimization."</li>
+                            </ul>
+
+                            <p class="article-text">The more specific you are, the better the AI can tailor its response to your exact needs. Include details about length, format, audience, tone, and any other relevant parameters. This approach eliminates guesswork and reduces the need for multiple iterations.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Provide Context and Background</h3>
+                            <p class="article-text">Context helps the AI understand not just what you want, but why you want it and under what circumstances. Background information enables the model to make better decisions and produce more relevant outputs.</p>
+
+                            <div class="article-code-block">
+                                <pre><code>Good Context Example:
+
+"You are a technical writer creating documentation for a 
+Python library used by data scientists. The audience consists 
+of professionals with intermediate Python skills but limited 
+experience with statistical analysis. The library is designed 
+for time-series forecasting. Write an introduction that 
+explains the core concepts without assuming prior knowledge 
+of time-series analysis."</code></pre>
+                            </div>
+
+                            <p class="article-text">When you provide context, the AI can adjust its language, depth, and approach accordingly. This leads to outputs that are more appropriate for your specific situation and audience. Context is especially important for complex or specialized tasks where assumptions matter.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Use Examples When Helpful</h3>
+                            <p class="article-text">Examples are one of the most powerful tools in prompt engineering. They show the AI exactly what you want, reducing ambiguity and improving consistency. Few-shot learning through examples is particularly effective for tasks requiring specific formats or styles.</p>
+
+                            <p class="article-text">When providing examples, ensure they're clear, representative, and consistent with each other. Two to three examples usually provide enough pattern recognition for the AI to understand your requirements. For more on this technique, see our guide on <a href="/blog/tips-and-best-practices/10-prompt-hacks/" class="article-internal-link">10 prompt hacks</a>.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Specify Output Format</h3>
+                            <p class="article-text">Always tell the AI how you want the output structured. Whether you need JSON, markdown, a table, bullet points, or prose, specifying the format upfront saves time and ensures compatibility with your workflow.</p>
+
+                            <ul class="article-list">
+                                <li><strong>Format specifications:</strong> "Format as a JSON object with keys: title, description, tags"</li>
+                                <li><strong>Structure requirements:</strong> "Present as a numbered list with each item containing a heading and 2-3 sentences"</li>
+                                <li><strong>Style guidelines:</strong> "Write in markdown format with H2 headings for main sections"</li>
+                            </ul>
+
+                            <p class="article-text">Format specifications are especially important when you're integrating AI outputs into automated systems or need consistent structure across multiple generations. This practice eliminates post-processing and reduces errors.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Break Complex Tasks Into Steps</h3>
+                            <p class="article-text">Complex requests benefit from step-by-step instructions. Breaking tasks into clear, sequential steps helps the AI process information systematically and produce more thorough, organized results.</p>
+
+                            <p class="article-text">When you outline steps explicitly, the AI follows a logical progression that ensures nothing is missed. This approach is particularly valuable for analytical tasks, multi-part projects, or when you need a structured approach to problem-solving.</p>
+
+                            <!-- H2 Section 2 -->
+                            <h2 class="article-heading">Critical Don'ts: Common Mistakes to Avoid</h2>
+                            <p class="article-text">Understanding what not to do is just as important as knowing best practices. These don'ts highlight common mistakes that undermine prompt effectiveness and lead to poor results. Avoiding these pitfalls will immediately improve your AI interactions.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Be Vague or Ambiguous</h3>
+                            <p class="article-text">Vagueness is the enemy of effective prompts. When you're unclear about what you want, the AI has to guess, and those guesses rarely align with your actual needs. Ambiguous prompts waste time and produce unsatisfactory results.</p>
+
+                            <ul class="article-list">
+                                <li><strong>Don't:</strong> "Make it better" or "Improve this"</li>
+                                <li><strong>Do:</strong> "Rewrite this paragraph to be more concise, use active voice, and include three specific benefits instead of general statements."</li>
+                            </ul>
+
+                            <p class="article-text">If you find yourself being vague, ask yourself: "What specifically do I want?" and "How will I know if the output is good?" Answering these questions will help you craft clearer, more effective prompts.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Ask Multiple Unrelated Questions</h3>
+                            <p class="article-text">While AI models can handle complex prompts, asking multiple unrelated questions in a single prompt often leads to incomplete or scattered responses. Each question competes for attention, and the AI may prioritize one over others or provide superficial answers to all.</p>
+
+                            <figure class="article-image-wrapper">
+                                <img src="/images/blog/prompt-multiple-questions-mistake.webp" alt="Avoid asking multiple unrelated questions in prompts - focus on one task at a time for better results" loading="lazy" class="article-image">
+                                <figcaption class="article-image-caption">Focusing on one task per prompt produces better, more complete results</figcaption>
+                            </figure>
+
+                            <p class="article-text">Instead of combining unrelated questions, create separate prompts for each distinct task. This approach ensures each request receives full attention and produces comprehensive responses. If questions are related, frame them as parts of a single, cohesive task.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Assume the AI Knows Your Context</h3>
+                            <p class="article-text">AI models don't remember previous conversations unless you're in an active chat session, and even then, context can be lost or misunderstood. Never assume the AI knows your industry, company, project details, or previous interactions unless you explicitly provide that information.</p>
+
+                            <p class="article-text">Always include relevant context in your prompts, even if it seems obvious to you. What's obvious to a human might not be obvious to an AI that processes each prompt independently. Providing context ensures the AI has all the information needed to produce appropriate responses.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Use Jargon Without Explanation</h3>
+                            <p class="article-text">While AI models understand a vast amount of terminology, using specialized jargon or acronyms without explanation can lead to misunderstandings. The AI might interpret terms differently than you intend, especially if they have multiple meanings in different contexts.</p>
+
+                            <ol class="article-list article-list-numbered">
+                                <li><strong>Define acronyms:</strong> "Using our CRM (Customer Relationship Management) system..."</li>
+                                <li><strong>Explain technical terms:</strong> "Apply the K-means clustering algorithm (an unsupervised machine learning method for grouping data points)..."</li>
+                                <li><strong>Clarify industry-specific terms:</strong> "In SaaS (Software as a Service) terminology, MRR (Monthly Recurring Revenue) refers to..."</li>
+                            </ol>
+
+                            <p class="article-text">When in doubt, provide brief explanations or definitions. This practice ensures the AI understands your terminology exactly as you intend, leading to more accurate and relevant responses.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Neglect Output Constraints</h3>
+                            <p class="article-text">Failing to set boundaries often results in outputs that are too long, too short, or include information you don't want. Without constraints, the AI has no guidance on scope, length, or content boundaries.</p>
+
+                            <p class="article-text">Always specify constraints relevant to your use case: word count limits, topic boundaries, style requirements, or content exclusions. These constraints help the AI focus and produce outputs that meet your specific needs. For more on maintaining consistency, see our article on <a href="/blog/tips-and-best-practices/consistent-ai-results/" class="article-internal-link">consistent AI results</a>.</p>
+
+                            <!-- H2 Section 3 -->
+                            <h2 class="article-heading">Advanced Dos: Elevating Your Prompts</h2>
+                            <p class="article-text">Once you've mastered the fundamentals, these advanced techniques will further enhance your prompt engineering skills. These dos represent sophisticated approaches that separate expert prompt engineers from beginners.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Use Role-Playing for Better Context</h3>
+                            <p class="article-text">Assigning specific roles to the AI helps it adopt appropriate expertise, communication style, and depth of knowledge. Role-playing is particularly effective when you need domain-specific insights or professional-level outputs.</p>
+
+                            <div class="article-code-block">
+                                <pre><code>Role-Playing Example:
+
+"You are a senior software architect with 15 years of 
+experience designing scalable web applications. You specialize 
+in microservices architecture and cloud infrastructure. 
+Review this system design and provide recommendations for 
+improving scalability and maintainability."</code></pre>
+                            </div>
+
+                            <p class="article-text">Role-playing activates specialized knowledge patterns in the AI's training data, leading to more authentic and expert-level responses. This technique is especially valuable for technical, creative, or professional writing tasks.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Iterate and Refine</h3>
+                            <p class="article-text">Perfect prompts rarely emerge on the first try. The best prompt engineers treat their initial prompts as starting points and refine them based on results. Iteration allows you to gradually improve prompts until they consistently produce excellent outputs.</p>
+
+                            <p class="article-text">When iterating, identify what worked and what didn't in the initial response. Adjust your prompt to emphasize successful elements and address weaknesses. This iterative approach is how professionals develop highly effective prompts for specific use cases.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DO: Test and Document Successful Prompts</h3>
+                            <p class="article-text">When you find prompts that work well, save them as templates. Building a library of proven prompts creates a valuable resource that ensures consistency and saves time on future projects.</p>
+
+                            <ul class="article-list">
+                                <li><strong>Document the prompt:</strong> Save the exact wording that produced good results</li>
+                                <li><strong>Record parameters:</strong> Note temperature settings, model version, and other relevant settings</li>
+                                <li><strong>Include examples:</strong> Save sample inputs and outputs to demonstrate expected behavior</li>
+                                <li><strong>Update regularly:</strong> Test saved prompts periodically to ensure they still work after model updates</li>
+                            </ul>
+
+                            <p class="article-text">A well-maintained prompt library becomes an organizational asset that improves over time. Consider using tools like our <a href="/" class="article-internal-link">AI prompt generator</a> to create and save standardized prompts.</p>
+
+                            <!-- H2 Section 4 -->
+                            <h2 class="article-heading">Advanced Don'ts: Sophisticated Mistakes</h2>
+                            <p class="article-text">These advanced don'ts address more subtle mistakes that even experienced users sometimes make. Avoiding these pitfalls will help you achieve professional-level results.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Overcomplicate Simple Tasks</h3>
+                            <p class="article-text">While detailed prompts are generally better, there's a point where additional complexity doesn't improve results and may actually confuse the AI. Simple tasks don't always need elaborate prompts.</p>
+
+                            <p class="article-text">If a straightforward request produces good results, don't add unnecessary complexity. Overcomplicating prompts wastes tokens, increases processing time, and can introduce confusion. Learn to recognize when simplicity is more effective than complexity.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Ignore Model-Specific Capabilities</h3>
+                            <p class="article-text">Different AI models have different strengths and capabilities. What works well for ChatGPT might not be optimal for Claude, and vice versa. Understanding each model's unique features helps you craft prompts that leverage their specific capabilities.</p>
+
+                            <p class="article-text">For example, Claude excels at long-form content and has a larger context window, making it better for tasks requiring extensive background. ChatGPT might be better for creative tasks or when you need more varied outputs. Tailor your prompts to the model you're using. Learn more about model differences in our <a href="/blog/ai-models-and-tools/chatgpt-vs-claude-vs-gemini-which-ai-model-is-best-for-you/" class="article-internal-link">AI model comparison guide</a>.</p>
+
+                            <!-- H3 Subsection -->
+                            <h3 class="article-subheading">DON'T: Forget to Validate Outputs</h3>
+                            <p class="article-text">Even the best prompts can occasionally produce unexpected results. Always validate AI outputs, especially for critical applications. Don't assume that because a prompt worked once, it will always work perfectly.</p>
+
+                            <p class="article-text">Implement validation checks for important use cases. Verify that outputs meet your requirements, check for factual accuracy when relevant, and ensure formats are correct. Validation catches issues before they impact your work or users.</p>
+
+                            <!-- H2 Conclusion -->
+                            <h2 class="article-heading">Mastering Prompt Engineering: The Path Forward</h2>
+                            <p class="article-text">Effective prompt engineering is a skill that develops through practice and attention to detail. The dos and don'ts outlined in this guide provide a solid foundation, but true mastery comes from applying these principles consistently and learning from each interaction.</p>
+
+                            <p class="article-text">Start by focusing on the fundamental dos: be specific, provide context, use examples, and specify formats. Simultaneously, avoid the critical don'ts: don't be vague, don't ask multiple unrelated questions, and don't assume context. As you become more comfortable, incorporate advanced techniques like role-playing and iterative refinement.</p>
+
+                            <p class="article-text">Remember that prompt engineering is an iterative process. Even experts refine their prompts based on results. Use these guidelines as a starting point, experiment with different approaches, and develop your own style. The most effective prompts are often those tailored to your specific needs and refined through experience. With practice and these essential dos and don'ts, you'll consistently craft prompts that unlock the full potential of AI models.</p>
+                        </div>
+
+                        <!-- Article Footer - Tags and Share -->
+                        <footer class="article-footer">
+                            <div class="article-tags">
+                                <span class="tags-label">Tags:</span>
+                                <a href="/blog/tag/prompt-engineering/" class="article-tag">Prompt Engineering</a>
+                                <a href="/blog/tag/best-practices/" class="article-tag">Best Practices</a>
+                                <a href="/blog/tag/prompt-guidelines/" class="article-tag">Prompt Guidelines</a>
+                            </div>
+                            <div class="article-share">
+                                <span class="share-label">Share:</span>
+                                <a href="https://twitter.com/intent/tweet?url=https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/&text=Prompt%20Engineering%20Dos%20and%20Don'ts:%20Essential%20Guidelines" target="_blank" rel="noopener noreferrer" class="share-link" aria-label="Share on Twitter">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/" target="_blank" rel="noopener noreferrer" class="share-link" aria-label="Share on Facebook">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://ipromptgenerator.com/blog/tips-and-best-practices/prompt-dos-and-donts/&title=Prompt%20Engineering%20Dos%20and%20Don'ts:%20Essential%20Guidelines" target="_blank" rel="noopener noreferrer" class="share-link" aria-label="Share on LinkedIn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar">
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">
+                                <svg class="widget-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                Blog Categories
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item">
+                                    <a href="/blog/prompt-engineering-basics/" class="category-link">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        <span class="category-name">Prompt Engineering Basics</span>
+                                        <span class="category-count">6</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="/blog/advanced-prompt-engineering/" class="category-link">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                        </svg>
+                                        <span class="category-name">Advanced Techniques</span>
+                                        <span class="category-count">6</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="/blog/chatgpt-tips/" class="category-link">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                        </svg>
+                                        <span class="category-name">ChatGPT Tips & Tricks</span>
+                                        <span class="category-count">6</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="/blog/ai-writing/" class="category-link">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                        </svg>
+                                        <span class="category-name">AI Writing & Content</span>
+                                        <span class="category-count">6</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="/blog/prompt-templates/" class="category-link">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                        </svg>
+                                        <span class="category-name">Prompt Templates</span>
+                                        <span class="category-count">6</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="/blog/ai-tools-reviews/" class="category-link">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <span class="category-name">AI Tools & Reviews</span>
+                                        <span class="category-count">6</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="/blog/tips-and-best-practices/" class="category-link active">
+                                        <svg class="category-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                        </svg>
+                                        <span class="category-name">Tips & Best Practices</span>
+                                        <span class="category-count">3</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">
+                                <svg class="widget-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                Popular Articles
+                            </h3>
+                            <ul class="popular-posts-list">
+                                <li class="popular-post-item">
+                                    <a href="/blog/tips-and-best-practices/10-prompt-hacks/" class="popular-post-link">
+                                        <div class="popular-post-image">
+                                            <img src="/images/blog/10-prompt-hacks-featured.webp" alt="10 Prompt Hacks" loading="lazy">
+                                        </div>
+                                        <div class="popular-post-info">
+                                            <h4 class="popular-post-title">10 Prompt Hacks: Expert Tips for Better AI Results</h4>
+                                            <time class="popular-post-date" datetime="2025-01-25">Jan 25, 2025</time>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-post-item">
+                                    <a href="/blog/tips-and-best-practices/consistent-ai-results/" class="popular-post-link">
+                                        <div class="popular-post-image">
+                                            <img src="/images/blog/consistent-ai-results-featured.webp" alt="Consistent AI Results" loading="lazy">
+                                        </div>
+                                        <div class="popular-post-info">
+                                            <h4 class="popular-post-title">How to Get Consistent AI Results: A Complete Guide</h4>
+                                            <time class="popular-post-date" datetime="2025-01-26">Jan 26, 2025</time>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-post-item">
+                                    <a href="/blog/prompt-engineering-basics/what-is-prompt-engineering/" class="popular-post-link">
+                                        <div class="popular-post-image">
+                                            <img src="/images/blog/what-is-prompt-engineering-featured.webp" alt="What is Prompt Engineering" loading="lazy">
+                                        </div>
+                                        <div class="popular-post-info">
+                                            <h4 class="popular-post-title">What is Prompt Engineering?</h4>
+                                            <time class="popular-post-date" datetime="2025-01-15">Jan 15, 2025</time>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Widget -->
+                        <div class="sidebar-widget sidebar-cta-widget">
+                            <h3 class="widget-title">
+                                <svg class="widget-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                Stay Updated
+                            </h3>
+                            <p class="widget-description">Get the latest AI prompting tips and tricks delivered to your inbox.</p>
+                            <a href="/#generator" class="btn btn-sidebar-cta">Try Prompt Generator</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Articles Section -->
+        <section class="related-articles-section">
+            <div class="container">
+                <h3 class="section-title-center">Related Articles</h3>
+                <div class="related-articles-grid">
+                    <article class="related-article-card">
+                        <div class="related-article-image">
+                            <img src="/images/blog/10-prompt-hacks-featured.webp" alt="10 Prompt Hacks" loading="lazy">
+                        </div>
+                        <div class="related-article-content">
+                            <h4 class="related-article-title">
+                                <a href="/blog/tips-and-best-practices/10-prompt-hacks/">10 Prompt Hacks: Expert Tips for Better AI Results</a>
+                            </h4>
+                            <p class="related-article-excerpt">Master the art of prompt engineering with these 10 powerful hacks that will transform your AI interactions and deliver superior results.</p>
+                            <time class="related-article-date" datetime="2025-01-25">Jan 25, 2025</time>
+                        </div>
+                    </article>
+                    <article class="related-article-card">
+                        <div class="related-article-image">
+                            <img src="/images/blog/consistent-ai-results-featured.webp" alt="Consistent AI Results" loading="lazy">
+                        </div>
+                        <div class="related-article-content">
+                            <h4 class="related-article-title">
+                                <a href="/blog/tips-and-best-practices/consistent-ai-results/">How to Get Consistent AI Results: A Complete Guide</a>
+                            </h4>
+                            <p class="related-article-excerpt">Learn proven strategies to achieve consistent AI results every time. Master prompt standardization and context management for reliable outputs.</p>
+                            <time class="related-article-date" datetime="2025-01-26">Jan 26, 2025</time>
+                        </div>
+                    </article>
+                    <article class="related-article-card">
+                        <div class="related-article-image">
+                            <img src="/images/blog/effective-prompt-elements-featured.webp" alt="Effective Prompt Elements" loading="lazy">
+                        </div>
+                        <div class="related-article-content">
+                            <h4 class="related-article-title">
+                                <a href="/blog/prompt-engineering-basics/effective-prompt-elements/">Effective Prompt Elements: What Makes a Great Prompt</a>
+                            </h4>
+                            <p class="related-article-excerpt">Discover the essential elements that make prompts effective and learn how to structure your AI interactions for better results.</p>
+                            <time class="related-article-date" datetime="2025-01-16">Jan 16, 2025</time>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h3 class="cta-title">Ready to Generate Better AI Prompts?</h3>
+                    <p class="cta-description">Use our free AI prompt generator to create optimized prompts instantly</p>
+                    <a href="/" class="btn btn-primary btn-cta">Try iPrompt Generator</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="/images/logo.png" alt="iPrompt Generator Logo" class="footer-logo-img">
+                        <h4 class="footer-title">iPrompt Generator</h4>
+                    </div>
+                    <p class="footer-description">Create better AI prompts instantly. Free, fast, and optimized for all AI models.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms/" class="footer-link">Terms of Service</a></li>
+                        <li><a href="/contact/" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 iPrompt Generator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="/script.js"></script>
+</body>
+</html>
+

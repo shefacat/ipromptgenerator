@@ -3112,6 +3112,7 @@ textarea:focus-visible {
     font-size: 0.9375rem;
     line-height: 1.6;
     color: var(--text-primary);
+    text-wrap: wrap;
 }
 
 .article-code-block code {
