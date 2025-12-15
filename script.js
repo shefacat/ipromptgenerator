@@ -64,6 +64,15 @@ const elements = {
 };
 
 // ================================================
+// COOLDOWN STATE
+// ================================================
+
+let cooldownActive = false;
+let cooldownTimer = null;
+let cooldownSeconds = 0;
+const COOLDOWN_DURATION = 15; // 15 seconds cooldown
+
+// ================================================
 // MOBILE NAVIGATION - TRANSFORM-BASED (NO OVERFLOW)
 // ================================================
 
@@ -280,11 +289,69 @@ Please provide detailed, high-quality output that directly addresses the user's 
 }
 
 // ================================================
+// COOLDOWN TIMER
+// ================================================
+
+function startCooldownTimer() {
+    // Clear any existing timer
+    if (cooldownTimer) {
+        clearInterval(cooldownTimer);
+    }
+
+    // Set cooldown state
+    cooldownActive = true;
+    cooldownSeconds = COOLDOWN_DURATION;
+
+    // Get the button text element
+    const btnText = elements.generateBtn.querySelector('.btn-text');
+
+    // Disable button and add cooldown class
+    elements.generateBtn.disabled = true;
+    elements.generateBtn.classList.add('cooldown');
+
+    // Create or update countdown span
+    let countdownSpan = btnText.querySelector('.countdown-timer');
+    if (!countdownSpan) {
+        countdownSpan = document.createElement('span');
+        countdownSpan.className = 'countdown-timer';
+        countdownSpan.style.cssText = 'font-size: 0.85em; margin-left: 0.5em; opacity: 0.8;';
+        btnText.textContent = 'Generate Prompt ';
+        btnText.appendChild(countdownSpan);
+    }
+    countdownSpan.textContent = `(${cooldownSeconds}s)`;
+
+    // Start countdown
+    cooldownTimer = setInterval(() => {
+        cooldownSeconds--;
+
+        if (cooldownSeconds > 0) {
+            countdownSpan.textContent = `(${cooldownSeconds}s)`;
+        } else {
+            // Cooldown finished
+            clearInterval(cooldownTimer);
+            cooldownTimer = null;
+            cooldownActive = false;
+
+            // Re-enable button and remove countdown
+            elements.generateBtn.disabled = false;
+            elements.generateBtn.classList.remove('cooldown');
+            btnText.textContent = 'Generate Prompt';
+        }
+    }, 1000);
+}
+
+// ================================================
 // PROMPT GENERATION HANDLER
 // ================================================
 
 async function handlePromptGeneration(e) {
     e.preventDefault();
+
+    // Check if cooldown is active
+    if (cooldownActive) {
+        showError(`Please wait ${cooldownSeconds} seconds before generating another prompt.`);
+        return;
+    }
 
     // Hide any previous error messages
     hideError();
@@ -312,6 +379,9 @@ async function handlePromptGeneration(e) {
         // Scroll to result
         scrollToResult();
 
+        // Start cooldown timer after successful generation
+        startCooldownTimer();
+
     } catch (error) {
         console.error('Error generating prompt:', error);
         showError('An error occurred while generating your prompt. Please try again.');
@@ -332,7 +402,10 @@ function setLoadingState(isLoading) {
             elements.generateBtn.disabled = true;
         } else {
             elements.generateBtn.classList.remove('loading');
-            elements.generateBtn.disabled = false;
+            // Only re-enable if cooldown is not active
+            if (!cooldownActive) {
+                elements.generateBtn.disabled = false;
+            }
         }
     }
 }
