@@ -102,6 +102,16 @@ function gtagSendEvent() {
   return false;
 }
 
+function gtagSendSupportEvent() {
+  gtag('event', 'support_button_click', {
+    'event_callback': function () {
+      console.log("support button click sent!");
+    },
+    'event_timeout': 2000
+  });
+  return true;
+}
+
 </script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9548270312571067"
@@ -139,8 +149,71 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
  <!-- Google tag (gtag.js) event - delayed navigation helper -->
 
 
+<style>
+    /* Mobile responsive styles for response section */
+    @media (max-width: 768px) {
+        .response-header-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
 
-    
+        .response-buttons-container {
+            flex-direction: column !important;
+            width: 100%;
+            gap: 0.5rem !important;
+        }
+
+        .response-buttons-container .btn-copy {
+            width: 100% !important;
+            flex: none !important;
+            min-width: 0 !important;
+            justify-content: center;
+        }
+
+        .response-buttons-container #testBtn {
+            width: 100% !important;
+            flex: none !important;
+            min-width: 0 !important;
+            font-size: 0.8rem !important;
+            padding: 0.5rem 0.75rem !important;
+            justify-content: center;
+        }
+
+        .response-title {
+            font-size: 1.1rem !important;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .response-header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-title {
+            margin-bottom: 0 !important;
+        }
+
+        .response-buttons-container {
+            flex-wrap: nowrap !important;
+        }
+
+        .response-buttons-container .btn-copy {
+            flex: 0 !important;
+        }
+
+        .response-buttons-container #testBtn {
+            height: 32px !important;
+            margin-top: 10px !important;
+            padding: 0 0.6rem !important;
+        }
+    }
+</style>
+
+
 </head>
 <body>
     <!-- Header Section -->
@@ -238,20 +311,27 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 </button>
                             </form>
                         </div>
-
                         <!-- Response Section -->
                         <div class="response-section" id="responseSection">
                             <div class="response-card enhanced-response">
-                                <div class="response-header">
-                                    <h4 class="response-title">Your Generated Prompt</h4>
-                                    <button class="btn btn-copy enhanced-copy-btn" id="copyBtn" aria-label="Copy prompt to clipboard">
-                                        <svg class="icon-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                        <span class="copy-text">Copy</span>
-                                    </button>
+                                <div class="response-header-wrapper">
+                                    <h4 class="response-title" style="margin-bottom: 0.75rem;">Your Generated Prompt</h4>
+                                    <div class="response-buttons-container" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                        <button class="btn btn-copy enhanced-copy-btn" id="copyBtn" aria-label="Copy prompt to clipboard" style="flex: 1; min-width: 120px;">
+                                            <svg class="icon-copy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                            </svg>
+                                            <span class="copy-text">Copy</span>
+                                        </button>
+                                        <a href="https://buymeacoffee.com/ipromptgenerator" target="_blank" rel="noopener noreferrer" class="btn" id="testBtn" onclick="gtagSendSupportEvent()" style="background-color: #6b7280; color: white; padding: 0.5rem 0.75rem; font-size: 0.875rem; font-weight: normal; display: flex; align-items: center; gap: 0.375rem; text-decoration: none; white-space: nowrap;">
+                                            <img src="images/buy-me-a-coffee-seeklogo.svg" alt="Coffee" style="width: 16px; height: 16px;">
+                                            <span>Support Project</span>
+                                        </a>
+                                    </div>
                                 </div>
+                                <p id="supportMessage" style="color: #16a34a; font-size: 0.875rem; margin: 0.5rem 0 0 0; text-align: left !important; display: none;">Support is optional. We appreciate it either way.</p>
+                                <p style="color: #9ca3af; font-size: 0.875rem; margin: 0.75rem 0 1rem 0; text-align: left !important;">Free to use. Support the project only if it helped you.</p>
                                 <div class="copy-success-message" id="copySuccessMessage">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>

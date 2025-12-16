@@ -605,6 +605,15 @@ function initEventListeners() {
         elements.clearTextBtn.addEventListener('click', clearTextarea);
     }
 
+    // Support button - show message on click
+    const supportBtn = document.getElementById('testBtn');
+    const supportMessage = document.getElementById('supportMessage');
+    if (supportBtn && supportMessage) {
+        supportBtn.addEventListener('click', () => {
+            supportMessage.style.display = 'block';
+        });
+    }
+
     // Keyboard shortcuts for textarea
     if (elements.userInput) {
         elements.userInput.addEventListener('keydown', (e) => {
