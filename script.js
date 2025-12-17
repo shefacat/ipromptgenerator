@@ -7,18 +7,21 @@ const API_ENDPOINT = 'https://promptgenerator.shiref-abouzaid.workers.dev/';
 
 // Example API call structure (uncomment and modify when ready):
 
-async function callAPI(userInput) {
+async function callAPI(userInput, type) {
     // Your Cloudflare Worker URL
     const WORKER_URL = API_ENDPOINT;
     try {
+        const requestBody = { userInput: userInput };
+        if (type) {
+            requestBody.type = type;
+        }
+
         const response = await fetch(WORKER_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                userInput: userInput
-            })
+            body: JSON.stringify(requestBody)
         });
 
         if (!response.ok) {
@@ -28,7 +31,7 @@ async function callAPI(userInput) {
 
         const data = await response.json();
         return data.generatedPrompt;
-        
+
     } catch (error) {
         console.error('API Error:', error);
         throw error;
@@ -131,9 +134,15 @@ function initMobileNav() {
         toggleMenu();
     });
 
-    // Close menu when clicking on a link
-    const navLinks = navMenu.querySelectorAll('.nav-link');
+    // Close menu when clicking on a non-dropdown link
+    const navLinks = navMenu.querySelectorAll('.nav-link:not(.nav-dropdown-toggle)');
     navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking on a dropdown link
+    const dropdownLinks = navMenu.querySelectorAll('.nav-dropdown-link');
+    dropdownLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
 
@@ -161,6 +170,47 @@ function initMobileNav() {
             !navMenu.contains(e.target) &&
             !navToggle.contains(e.target)) {
             closeMenu();
+        }
+    });
+}
+
+// ================================================
+// DROPDOWN MENU FUNCTIONALITY
+// ================================================
+
+function initDropdownMenu() {
+    const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = toggle.parentElement;
+            const isActive = dropdown.classList.contains('active');
+
+            // Close all other dropdowns
+            document.querySelectorAll('.nav-dropdown.active').forEach(item => {
+                if (item !== dropdown) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle current dropdown
+            if (isActive) {
+                dropdown.classList.remove('active');
+            } else {
+                dropdown.classList.add('active');
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-dropdown')) {
+            document.querySelectorAll('.nav-dropdown.active').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
         }
     });
 }
@@ -488,6 +538,10 @@ async function copyToClipboard() {
     try {
         await navigator.clipboard.writeText(text);
         showCopySuccess();
+        // Send Google Analytics event
+        if (typeof gtagSendCopyEvent === 'function') {
+            gtagSendCopyEvent();
+        }
     } catch (err) {
         // Fallback for older browsers
         fallbackCopyToClipboard(text);
@@ -507,6 +561,10 @@ function fallbackCopyToClipboard(text) {
         const successful = document.execCommand('copy');
         if (successful) {
             showCopySuccess();
+            // Send Google Analytics event
+            if (typeof gtagSendCopyEvent === 'function') {
+                gtagSendCopyEvent();
+            }
         } else {
             showCopyError();
         }
@@ -806,6 +864,7 @@ function initScrollToTextarea() {
 function initApp() {
     // Initialize all features
     initMobileNav();
+    initDropdownMenu();
     initStickyHeader();
     initCharCounter();
     initEventListeners();
