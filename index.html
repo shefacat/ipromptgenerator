@@ -17,14 +17,14 @@
     <meta property="og:description" content="Generate optimized AI prompts instantly. Free online tool to create better ChatGPT prompts and AI instructions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ipromptgenerator.com/">
-    <meta property="og:image" content="https://ipromptgenerator.com/og-image.jpg">
+    <meta property="og:image" content="https://ipromptgenerator.com/images/logo-mini.png">
     <meta property="og:site_name" content="iPrompt Generator">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="iPrompt Generator - Free AI Prompt Generator Tool">
     <meta name="twitter:description" content="Generate optimized AI prompts instantly. Free online tool to create better ChatGPT prompts and AI instructions.">
-    <meta name="twitter:image" content="https://ipromptgenerator.com/twitter-image.jpg">
+    <meta name="twitter:image" content="https://ipromptgenerator.com/logo-mini.png">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -160,6 +160,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
 <style>
+    /* Ad container styles */
+    .ad-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+
+    /* Desktop ad - show only on desktop */
+    .ad-desktop {
+        display: none;
+    }
+
+    @media (min-width: 769px) {
+        .ad-desktop {
+            display: flex;
+        }
+        .ad-mobile {
+            display: none;
+        }
+    }
+
     /* Mobile responsive styles for response section */
     @media (max-width: 768px) {
         .response-header-wrapper {
@@ -333,6 +356,34 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 </button>
                             </form>
                         </div>
+
+                        <!-- Desktop Ad (728x90 Banner) -->
+                        <div class="ad-container ad-desktop">
+                            <script type="text/javascript">
+                              atOptions = {
+                                'key' : '189773de2958bbfb6c35270d74998128',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                              };
+                            </script>
+                            <script
+                              type="text/javascript"
+                              src="https://www.highperformanceformat.com/189773de2958bbfb6c35270d74998128/invoke.js"
+                            ></script>
+                        </div>
+
+                        <!-- Mobile Ad -->
+                        <div class="ad-container ad-mobile">
+                            <script
+                              async="async"
+                              data-cfasync="false"
+                              src="https://pl28279489.effectivegatecpm.com/e9c1917d133481d30debde9682cd1393/invoke.js"
+                            ></script>
+                            <div id="container-e9c1917d133481d30debde9682cd1393"></div>
+                        </div>
+
                         <!-- Response Section -->
                         <div class="response-section" id="responseSection">
                             <div class="response-card enhanced-response">

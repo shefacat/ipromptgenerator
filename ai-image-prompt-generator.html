@@ -17,14 +17,14 @@
     <meta property="og:description" content="Free AI prompt generator for artists & creators. Generate professional art prompts for Midjourney, DALL-E, Stable Diffusion, Leonardo AI. Perfect for concept art, illustration & digital artwork.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ipromptgenerator.com/ai-image-prompt-generator.html">
-    <meta property="og:image" content="https://ipromptgenerator.com/og-image.jpg">
+    <meta property="og:image" content="https://ipromptgenerator.com/images/logo-mini.png">
     <meta property="og:site_name" content="iPrompt Generator">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Image Prompt Generator for Artists - Free Tool for Midjourney, DALL-E & Stable Diffusion">
     <meta name="twitter:description" content="Free AI prompt generator for artists & creators. Generate professional art prompts for Midjourney, DALL-E, Stable Diffusion. Perfect for concept art & illustration.">
-    <meta name="twitter:image" content="https://ipromptgenerator.com/twitter-image.jpg">
+    <meta name="twitter:image" content="https://ipromptgenerator.com/images/logo-mini.png">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -40,7 +40,7 @@
 <link rel="manifest" href="/site.webmanifest">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Structured Data - WebApplication Schema -->
     <script type="application/ld+json">
@@ -173,6 +173,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
 <style>
+    /* Ad container styles */
+    .ad-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+
+    /* Desktop ad - show only on desktop */
+    .ad-desktop {
+        display: none;
+    }
+
+    @media (min-width: 769px) {
+        .ad-desktop {
+            display: flex;
+        }
+        .ad-mobile {
+            display: none;
+        }
+    }
+
     /* Mobile responsive styles for response section */
     @media (max-width: 768px) {
         .response-header-wrapper {
@@ -242,7 +265,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <header class="header" id="header">
         <nav class="nav container">
             <a href="/" class="nav-brand">
-                <img src="images/logo.png" alt="iPrompt Generator Logo" class="logo-img">
+                <img src="/images/logo.png" alt="iPrompt Generator Logo" class="logo-img">
                 <span class="logo">iPrompt Generator</span>
             </a>
             <ul class="nav-menu" id="navMenu">
@@ -346,6 +369,33 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </form>
                         </div>
 
+                        <!-- Desktop Ad (728x90 Banner) -->
+                        <div class="ad-container ad-desktop">
+                            <script type="text/javascript">
+                              atOptions = {
+                                'key' : '189773de2958bbfb6c35270d74998128',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                              };
+                            </script>
+                            <script
+                              type="text/javascript"
+                              src="https://www.highperformanceformat.com/189773de2958bbfb6c35270d74998128/invoke.js"
+                            ></script>
+                        </div>
+
+                        <!-- Mobile Ad -->
+                        <div class="ad-container ad-mobile">
+                            <script
+                              async="async"
+                              data-cfasync="false"
+                              src="https://pl28279489.effectivegatecpm.com/e9c1917d133481d30debde9682cd1393/invoke.js"
+                            ></script>
+                            <div id="container-e9c1917d133481d30debde9682cd1393"></div>
+                        </div>
+
                         <!-- Response Section -->
                         <div class="response-section" id="responseSection">
                             <div class="response-card enhanced-response">
@@ -360,7 +410,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                             <span class="copy-text">Copy</span>
                                         </button>
                                         <a href="https://buymeacoffee.com/ipromptgenerator" target="_blank" rel="noopener noreferrer" class="btn" id="testBtn" onclick="gtagSendSupportEvent()" style="background-color: #6b7280; color: white; padding: 0.5rem 0.75rem; font-size: 0.875rem; font-weight: normal; display: flex; align-items: center; gap: 0.375rem; text-decoration: none; white-space: nowrap;">
-                                            <img src="images/buy-me-a-coffee-seeklogo.svg" alt="Coffee" style="width: 16px; height: 16px;">
+                                            <img src="/images/buy-me-a-coffee-seeklogo.svg" alt="Coffee" style="width: 16px; height: 16px;">
                                             <span>Support Project</span>
                                         </a>
                                     </div>
@@ -512,7 +562,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="footer-content">
                 <div class="footer-section">
                     <a href="/" class="footer-brand">
-                        <img src="images/logo.png" alt="iPrompt Generator Logo" class="footer-logo-img">
+                        <img src="/images/logo.png" alt="iPrompt Generator Logo" class="footer-logo-img">
                         <h4 class="footer-title">iPrompt Generator</h4>
                     </a>
                     <p class="footer-description">Create better AI prompts instantly. Free, fast, and optimized for all AI models.</p>
@@ -537,7 +587,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </footer>
 
     <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 
     <!-- Override for Image Prompt Generator -->
     <script>
